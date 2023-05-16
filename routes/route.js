@@ -24,6 +24,10 @@ router.delete('/delete/:id', authenticateToken, deletePost)
 router.post('/comment/new', upload.any(), authenticateToken, postComment)
 router.get('/comments/:id', upload.any(), authenticateToken, getAllComments)
 router.delete('/comment/delete/:id', upload.any(), authenticateToken, deleteComment)
-
+router.get('/check', (req,res,next)=>{
+    res.status(200).json({
+        msg: 'working well'
+    })
+})
 
 export default router;
