@@ -57,7 +57,7 @@ export const login_POST = async (req,res,next) => {
         }  
     }catch(error){
         return res.status(500).json({
-            msg: 'Error while login in user'
+            msg: error
         })
     }
 }
